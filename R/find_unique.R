@@ -13,7 +13,8 @@
 ##
 
 require(dplyr)
+require(purrr)
 
 find_unique <- function(df){
-  apply(x, MARGIN = 2, n_distinct)
+  map_dbl(df, n_distinct)
 }
